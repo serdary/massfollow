@@ -1,0 +1,23 @@
+<% if @current_user  %>
+	<h2 class="followee-count">You are following <%= pluralize(@current_user.followee_count, 'person') %>.</h2>
+
+	<div class="list-wrapper">
+		<% unless @followees.blank? %>
+			<div class="cbx-helpers">
+				<a href="#" id="select-all">select all</a>
+			</div>
+		<% end %>
+		
+		<div class="followee-list">
+			<%=render :partial => 'list', :locals => { :followees => @followees, :type => 'unfollow', :paged_ids => @paged_ids } %>
+		</div>
+	</div>
+<% else %>
+	<div class="home-wrapper">
+		<h1>Twitter Mass Follow</h1>
+		<h2>Helps managing the users you follow</h2>
+		<p>You can mass follow/unfollow users on twitter, you just need to connect this app to twitter by signing in with your twitter account.</p>
+		<h3>Search and Follow new users</h3>
+		<p>Search new users and mass follow/unfollow them easily.</p>
+	</div>
+<% end %>

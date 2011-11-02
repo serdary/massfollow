@@ -1,0 +1,21 @@
+development: &local
+  site_name: Mass Follow
+  site_url: http://localhost:3000/
+  page_size: 10
+  consumer_key: DUMMY_KEY
+  consumer_secret: DUMMY_KEY
+  tw_api_url: http://api.twitter.com
+  api_call_url: http://api.twitter.com/1/
+production:
+  site_name: Mass Follow
+  site_url: http://localhost:3000/
+  page_size: 20
+  consumer_key: DUMMY_KEY
+  consumer_secret: DUMMY_KEY
+  tw_api_url: http://api.twitter.com
+  api_call_url: http://api.twitter.com/1/
+staging:
+  <<: *local
+
+test:
+  <<: *local

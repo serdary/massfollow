@@ -1,0 +1,25 @@
+<% if followees %>
+	<%= form_tag (type == 'follow') ? follow_user_path : unfollow_user_path do %>
+		<% followees.each_with_index do |followee, index| %>
+			<div class="row <%= cycle('style1', 'style2') %>">
+				<%= check_box_tag "nicknames[]", followee[:nickname], false, :class => 'checkbox', :id => "cbx_#{index}" %>
+				<label for="<%= "cbx_#{index}" %>">
+					<%= link_to followee[:nickname], "http://twitter.com/#{followee[:nickname]}", :target => "_blank" %>
+					<%= " - #{followee[:name]}" %>
+				</label>
+			</div>
+		<% end %>
+		<div class="row">
+			<%= submit_tag type.capitalize, :class => "form-submit" %>
+		</div>
+	<% end %>
+	
+	<% if type == 'follow' %>
+		<%= will_paginate followees %>
+	<% else %>
+		<%= will_paginate paged_ids %>
+	<% end %>
+	
+<% elsif @current_user %>
+	You don't follow anyone yet. :(
+<% end %>

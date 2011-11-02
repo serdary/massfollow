@@ -1,0 +1,40 @@
+MassFollow.net - Twitter Mass Follow 
+-----------------------------------------------------------
+
+Author: Serdar Yildirim // me[dot]serdaryildirim[dot]com
+Website: http://massfollow.net
+Demo Website: http://massfollow.net
+Current Version: 0.2
+
+Current Features
+-----------------------------------------------------------
+
+* Mass Manage followed people, follow/unfollow
+* Search users by keywords
+* Follow / Unfollow new users that found by searching
+
+Dependencies
+-----------------------------------------------------------
+
+* ruby >= 1.9.2
+* rubygems >= 1.3.7
+* rails 3
+
+Installation
+-----------------------------------------------------------
+
+* Install the dependencies
+	sudo gem install bundler
+	
+* Download massfollow source code
+	https://github.com/serdary/massfollow
+	
+* Change the application configs
+	config/config.yml
+	config/database.yml
+	
+* Install app dependencies
+	bundle install
+
+* Start the server
+	rails s

@@ -1,0 +1,187 @@
+// Place all the styles related to the twitter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* color code variables */
+$blue-color: #0079AC;
+$black-color: #333333;
+$warning-color: #AA0000;
+$success-color: #12C94E;
+$row-color1: #F4F6FD;
+$row-color2: #FAFBFF;
+$row-hover-color: #ECF0FE;
+
+/* main wrapper and site structure styles */
+.wrapper {
+    color: $black-color;
+    font-family: trebuchet ms,arial,Verdana,sans-serif;
+    font-size: 13px;
+    padding: 20px 30px;
+  .header {
+      border-bottom: 1px solid $blue-color;
+      clear: both;
+      float: left;
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 25px;
+      padding-bottom: 10px;
+      width: 100%;
+      .site-name {
+          float: left;
+          h1 {
+            font-size: 24px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
+            a {
+              text-decoration: none;
+              color: $black-color;
+              &:hover {   
+                text-decoration: underline;
+              }  
+              &:active {   
+                color: $black-color;
+              }  
+            }
+          }
+      }
+  }
+  .account {
+    float: right;
+    font-size: 14px;
+    span {
+      float: left;
+    }
+  }
+}
+#loader {
+    background: url("loader.gif") no-repeat scroll 50% 50% #000000;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 0.75;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.tw-login {
+    background: url("twitter-signin.png") no-repeat;
+    display: block;
+    height: 24px;
+    text-indent: -9999px;
+    width: 151px;
+}
+.logout {
+    float: left;
+    font-size: 12px;
+    margin: 0 10px;
+}
+.warning {
+    color: $warning-color;
+}
+.success {
+    color: $success-color;
+}
+.notification {
+    color: #F41A2F;
+    display: none;
+    font-size: 16px;
+    font-weight: normal;
+    height: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 200;
+    .text {
+        background-color: #d6e8f9;
+        border-bottom: 1px solid #1A5CA4;
+        padding: 8px 0;
+        font-size: 12px;
+    }
+}
+.followee-count {
+    font-weight: normal;
+    margin-top: 20px;
+}
+#query {
+    width: 300px;
+}
+.search-btn {
+    height: 30px !important;
+    width: 100px;
+}
+.followee-list {
+    width: 100%;
+    .row {
+      line-height: 34px;
+      padding: 0 0.5%;
+      width: 99%;
+      input.checkbox {
+        margin: 0;
+        width: 18px;
+      }
+      input {
+        margin-top: 10px;
+      }
+      span {
+        margin-left: 10px;
+      }
+      a {
+        color: $black-color;
+      }
+    }
+    .style1 {
+      background-color: $row-color1;
+      &:hover {   
+        background-color: $row-hover-color;
+      }  
+    }
+    .style2 {
+      background-color: $row-color2;
+      &:hover {   
+        background-color: $row-hover-color;
+      }  
+    }
+}
+.pagination {
+    margin-top: 15px;
+    a {
+      color: $blue-color;
+      &:hover {   
+        text-decoration: none;
+      }  
+    }
+    a, em, span {
+      margin-right: 5px;
+    }
+}
+.cbx-helpers {
+    margin-bottom: 5px;
+    padding: 0 0.5%;
+    width: 99%;
+  a {
+    color: $blue-color;
+  }
+}
+.home-wrapper {
+  clear: both;
+  float: left;
+  margin-top: 10px;
+  h1 {
+    color: #0266A4;
+    font-size: 22px;
+    font-weight: normal;
+    text-decoration: underline;
+  }
+  h2 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  h3 {
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
